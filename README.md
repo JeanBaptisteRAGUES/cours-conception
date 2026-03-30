@@ -1,5 +1,47 @@
-**TD 24/03/2026**
+**TD 30/03/2026**  
+Commandes utilisées :   
 
+
+Tâches effectuées : 
+-Utilisation du context avec createContext()  
+-Utilisation du localStorage avec localStorage.counter  
+-Requête API avec fetch  
+-Récupérer la version appel API en temps réel sur le Github du prof 
+-Utiliser un hook custom pour l'appel API (bonne pratique) 
+
+Infos :  
+On passe de :    
+ ```jsx  
+ return (    
+    <BrowserRouter>    
+        <Routes>    
+            <Route element={<Layout />}>    
+                <Route path="/" element={<Home />} />    
+                <Route path="/contact" element={<Contact />} />    
+            </Route>    
+        </Routes>    
+    </BrowserRouter>    
+ );    
+ ```
+ à :  
+ ```jsx
+return (
+    <BrowserRouter>
+        <CounterContextProvider>
+            <Routes>
+                <Route element={<Layout />}>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/contact" element={<Contact />} />
+                </Route>
+            </Routes>
+        </CounterContextProvider>
+    </BrowserRouter>
+);
+ ```
+-https://github.com/Elanis/coursm1-fi  
+
+
+**TD 24/03/2026**
 Commandes utilisées :
 > npm create vite@latest  
 > npm i react-router  

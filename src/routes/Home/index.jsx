@@ -1,8 +1,12 @@
-import { useEffect, useMemo, useState } from "react";
+import { useContext, useEffect, useMemo, useState } from "react";
 import { useLocation } from "react-router";
+import { CounterContext } from "../../contexts/CounterContext";
 
 export default function Home() {
-    const [count, setCount] = useState(0);
+    const {
+        counter,
+        setCounter,
+    } = useContext(CounterContext);
     const [count2, setCount2] = useState(0);
     const location = useLocation();
 
@@ -25,9 +29,9 @@ export default function Home() {
     ], []);
 
     useEffect(() => {
-        document.title = `Counter ${count}`;
+        document.title = `Counter ${counter}`;
         console.log(location);
-    }, [count]);
+    }, [counter]);
 
     return (
         <div>
@@ -35,9 +39,9 @@ export default function Home() {
             <input 
                 type="button" 
                 value="Press me!" 
-                onClick={() => setCount(prevCount => prevCount + 1)} 
+                onClick={() => setCounter(prevCounter => prevCounter + 1)} 
             />
-            <span>Counter : {count}</span>
+            <span>Counter : {counter}</span>
 
             <input 
                 type="button" 
