@@ -1,4 +1,20 @@
 **TD 30/03/2026**  
+Commandes utilisées :
+> npm install react-i18next i18next --save 
+> npm install i18next-http-backend i18next-browser-languagedetector --save  
+
+
+Tâches effectuées : 
+-Installation de react-i18next pour traduire les pages web
+
+Infos :  
+-Architecture traduction : locales/fr/home.json, locales/en/home.json ou locales/home/fr.json, locales/home/en.json
+-Pour la traduction, faire attention à prendre comme référence la langue du navigateur  
+-Faire aussi attention aux langues qui se lisent de droite à gauche
+-Faire attention aux langues verbeuses qui prennent plus de place
+
+
+**TD 30/03/2026**  
 Commandes utilisées :   
 
 
