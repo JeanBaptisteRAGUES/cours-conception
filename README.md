@@ -2,16 +2,26 @@
 Commandes utilisées :
 > npm install react-i18next i18next --save 
 > npm install i18next-http-backend i18next-browser-languagedetector --save  
+> npm install cypress --save-dev  
+> npm run dev -- --host
 
 
 Tâches effectuées : 
--Installation de react-i18next pour traduire les pages web
+-Installation de react-i18next pour traduire les pages web  
+-Installation de Cypress pour effectuer des tests end to end  
 
 Infos :  
--Architecture traduction : locales/fr/home.json, locales/en/home.json ou locales/home/fr.json, locales/home/en.json
+-Architecture traduction : locales/fr/home.json, locales/en/home.json ou locales/home/fr.json, locales/home/en.json  
 -Pour la traduction, faire attention à prendre comme référence la langue du navigateur  
--Faire aussi attention aux langues qui se lisent de droite à gauche
--Faire attention aux langues verbeuses qui prennent plus de place
+-Faire aussi attention aux langues qui se lisent de droite à gauche  
+-Faire attention aux langues verbeuses qui prennent plus de place 
+-Attention à bien lancer avec la commande npm run dev -- --host pour que Cypress puisse accéder au site  
+-On peut aussi mettre l'option host: true  
+-Si possible, enregistrer les éléments du DOM dans des variables pour plus de lisibilité  
+-Utiliser le plus possible la recherche par id ou classe  
+-Faire le setup pour pouvoir lancer les tests directement avec npm run test  
+-Lancer la commande npm run test plusieurs fois, jusqu'à ce que toutes les dépendances soient installées  
+-A chaque fois que la commande est exécutée, npm détecte les dépendances manquantes et les installe    
 
 
 **TD 30/03/2026**  
